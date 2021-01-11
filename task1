@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+class Point:
+  def __init__(self, xdata, ydata, zdata):
+    self.x = xdata
+    self.y = ydata
+    self.z = zdata
+  def show_points(self):
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
+    ax.scatter3D(self.x, self.y, self.z);
+  
+
+a = Point(1, 2, 3)
+a.show_points()
