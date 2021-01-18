@@ -9,8 +9,17 @@ class Point:
   def show_points(self):
     fig = plt.figure()
     ax = plt.axes(projection='3d')
+    ax.scatter3D(self.x, self.y, self.z)
+  def move_points(self, new_x, new_y, new_z):
+    self.x += new_x
+    self.y += new_y
+    self.z += new_z
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
     ax.scatter3D(self.x, self.y, self.z);
+
+  def cal_dist(self, point):
+    return math.sqrt((self.x-point.x)**2 + (self.y-point.y)**2 + (self.z-point.z)**2) 
   
 
-a = Point(1, 2, 3)
-a.show_points()
+
